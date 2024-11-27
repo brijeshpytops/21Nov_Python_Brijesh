@@ -96,3 +96,5 @@ print(type(num1 + num2))
 
 # print(type(num_int)) # <class 'int'>
 
+# name = "tops"
+# print(type(int(name)))

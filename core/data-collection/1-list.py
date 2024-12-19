@@ -1,5 +1,5 @@
 """
-list in python: Ordered, mutable, duplicate values are allowed, indeing, slicing
+list in python: Ordered, mutable, duplicate values are allowed, indexing, slicing
 
 theory:
 

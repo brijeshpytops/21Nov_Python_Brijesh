@@ -9,7 +9,6 @@ def function_name(arguments/parameteres):
     code block
 
 Function call:
-
 function_name(arguments_values)
 """
 
@@ -83,3 +82,65 @@ function_name(arguments_values)
 # print(next(nums_))
 # print(next(nums_))
 # print(next(nums_))
+
+# lambda function
+
+# add = lambda x,y : x + y
+# print(add(10, 20))
+
+# map function
+
+# nums = [1,2,3,4,5,6,7,8,9,10]
+# print(list(map(lambda num:num**2, nums)))
+# print(list(filter(lambda num:num % 2 == 0, nums)))
+# print(list(filter(lambda num:num % 2 != 0, nums)))
+
+# from functools import reduce
+
+# print(reduce(lambda x, y: x + y, nums))
+
+# num = 20 # global
+
+# def test():
+#     global num  # accessing global variable
+#     num = 10 # local 
+#     print(num)
+
+# test()
+# print(num)
+
+# num = 10
+# num = 20
+# print(num)
+
+
+# def outer():
+#     print("I am from outer function")
+#     def inner():
+#         print("I am from inner function")
+#     return inner()
+
+# outer()
+
+
+# def title_case(func):
+#     def wrapper():
+#         res = func().title()
+#         return res
+#     return wrapper
+
+# def upper_case(func):
+#     def wrapper():
+#         res = func().upper()
+#         print(res)
+#         return res
+#     return wrapper
+
+# @title_case
+# @upper_case
+# def test():
+#     return input("Enter a something: ")
+
+# print(test())
+
+

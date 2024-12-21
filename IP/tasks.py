@@ -5,3 +5,23 @@
 # - count total consonents in a given string
 # - count total digit in a given string
 # - count total special symbols in a given string
+
+
+# sp = "@!$#%$"
+
+# ch = "ajkj5456"
+
+# print(not sp.isalnum())
+
+# Task 2] Gusseing game
+
+# - wn = 12
+# - gn = 45
+
+# gn < wn - too low
+# gn > wn - too high
+# gn == wn - you win
+
+# import random
+# wn = random.randint(1, 100)
+# print(wn)

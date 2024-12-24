@@ -25,3 +25,5 @@
 # import random
 # wn = random.randint(1, 100)
 # print(wn)
+
+# Task 3]  bill generate with date, time and more..

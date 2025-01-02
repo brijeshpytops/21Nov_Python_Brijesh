@@ -27,3 +27,15 @@
 # print(wn)
 
 # Task 3]  bill generate with date, time and more..
+
+# Task 4] 
+# Write a program to print a diamond pattern with a given number of rows.
+
+# num = 4
+#    *
+#   * *
+#  * * *
+# * * * * 
+#  * * * 
+#   * *
+#    *

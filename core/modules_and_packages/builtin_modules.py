@@ -36,3 +36,25 @@ current_time = datetime.now()
 # print(current_time.strftime('%d-%m/%Y, %I:%M:%S %p - %a %A %w %j %U'))
 
 # https://docs.python.org/3/library/datetime.html
+
+import random
+
+# print(random.random())
+
+# print(random.randint(1, 100))
+
+# print(random.randrange(1, 11, 2))
+
+# musics = [
+#     'Pop',
+#     'Rock',
+#     'Hip Hop',
+#     'Jazz',
+#     'Electronic',
+#     'Classical'
+# ]
+
+# random.shuffle(musics)
+# print(musics)
+
+# print(random.choice(musics))

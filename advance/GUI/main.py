@@ -1,6 +1,7 @@
 # tkinter : toolkit interface
 
 import tkinter as tk
+from DBMYSQL.insert_data import insert_user_data, check_user_exists
 
 # Create a window
 screen = tk.Tk()
@@ -26,8 +27,8 @@ label_legend.config(font=('Arial', 18))
 # set margin and padding 10px
 label_legend.config(padx=10, pady=10)
 
-# on click login btn open new window
 
+# on click login btn open new window
 def open_login_window():
     login_screen = tk.Toplevel()
     login_screen.geometry('400x400')
@@ -48,10 +49,36 @@ def open_login_window():
     entry_password = tk.Entry(login_screen, show='*')
     entry_password.pack()
 
+    def get_login_form_data():
+        email = entry_email.get()
+        password = entry_password.get()
+        print(check_user_exists(email, password))
+        if check_user_exists(email, password):
+            lg_msg = tk.Label(
+                login_screen,
+                text="Login Successful!",
+                font=('Arial', 18),
+                fg='green',
+                width=20,
+                height=5,
+            )
+            lg_msg.pack()
+        else:
+            lg_msg = tk.Label(
+                login_screen,
+                text="Login Failed!",
+                font=('Arial', 18),
+                fg='red',
+                width=20,
+                height=5,
+            )
+            lg_msg.pack()
+
     # submit btn
-    submit_btn = tk.Button(login_screen, text='Submit', command=lambda: print("Submit button clicked"))
+    submit_btn = tk.Button(login_screen, text='Submit', command=lambda: get_login_form_data())
     submit_btn.pack()
     submit_btn.config(font=('Arial', 18), bg='lightgrey', fg='black')
+ 
     
 
 # on click sign up btn open new window
@@ -80,10 +107,36 @@ def open_signup_window():
     entry_confirm_password = tk.Entry(signup_screen, show='*')
     entry_confirm_password.pack()
 
+
+
+    def get_signup_form_data():
+        email = entry_email.get()
+        password = entry_password.get()
+        confirm_password = entry_confirm_password.get()
+        if password == confirm_password:
+            reg_msg = tk.Label(
+                signup_screen,
+                text="Registration Successful!",
+                fg="green",
+                font=("Arial", 12)
+            )
+            reg_msg.pack(side='top')
+            insert_user_data(email, password)
+        else:
+            reg_msg = tk.Label(
+                signup_screen,
+                text="Passwords do not match!",
+                fg="red",
+                font=("Arial", 12)
+            )
+            reg_msg.pack(side='top')
+
+
     # submit btn
-    submit_btn = tk.Button(signup_screen, text='Submit', command=lambda: print("Submit button clicked"))
+    submit_btn = tk.Button(signup_screen, text='Submit', command=lambda: get_signup_form_data())
     submit_btn.pack()
     submit_btn.config(font=('Arial', 18), bg='lightgrey', fg='black')
+   
 
 
 

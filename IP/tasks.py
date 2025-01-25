@@ -39,3 +39,21 @@
 #  * * * 
 #   * *
 #    *
+
+# Task 5]
+
+# create on musics dir [m1.mp3, m2.mp3...]
+# get all musics list from musics dir using os library
+# show all that musics on GUI
+
+
+# Task 6]
+
+# Write a program to print the following pattern.
+
+# * * * * *
+# *       *
+# *   X   *
+# *       *
+# * * * * *
+ 
